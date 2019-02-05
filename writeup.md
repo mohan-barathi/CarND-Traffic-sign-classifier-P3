@@ -29,6 +29,9 @@ The goals / steps of this project are the following:
 [image6]: ./examples/TrafficSignal.png "Traffic Signal"
 [image7]: ./examples/softmax5.png "softmax5"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image9]: ./examples/feature_map.png "feature_map"
+[image10]: ./examples/speed20.png "speed20"
+
 
 ## Rubric Points
 ---
@@ -110,6 +113,7 @@ The LeNet Architecture is so good that the initial try gave 89% accuracy. Howeve
 Hyper parameters :
 
 | Epochs     | 100  |
+|:------------:|:-------|
 | batch-size | 128  |
 | Learning rate | 0.001 |
 
@@ -168,4 +172,5 @@ The model was able to correctly guess 3 of the 5 traffic signs, which gives an a
 # Optional Category :  Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 * The First 2 layers' operations are taken out from Neural network, and are fed to the provided function, along with normalised sample image to visualize the Nural network operation. (Last block of IPython notebook.)
 
-
+![alt text][image10]
+![alt text][image9]
