@@ -23,12 +23,15 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/visualization.png "Visualization"
 [image2]: ./examples/augment.png "Augmentation"
-[image3]: ./examples/after_generation.jpg "After generation"
+[image3]: ./examples/after_generation.png "After generation"
 [image4]: ./examples/accuracy.png "Accuracy"
 [image5]: ./examples/web_images.png "Web Images"
 [image6]: ./examples/TrafficSignal.png "Traffic Signal"
 [image7]: ./examples/softmax5.png "softmax5"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image9]: ./examples/feature_map.png "feature_map"
+[image10]: ./examples/speed20.png "speed20"
+
 
 ## Rubric Points
 ---
@@ -43,7 +46,7 @@ This project repository contains
 
 # CATEGORY : Data Set Summary & Exploration
 ## CRITERIA : Dataset Summary
-Bar graph from pandas library is used to calculate summary statistics of the traffic
+Bar graph is used to calculate summary statistics of the traffic signs
 > Code blocks 6, 7, and 8
 
 * The size of training set is 34799
@@ -53,7 +56,7 @@ Bar graph from pandas library is used to calculate summary statistics of the tra
 * The number of unique classes/labels in the data set is 43
 
 ## CRITERIA : Exploratory Visualization
-> Bar graph using Matplotlib, of the data extracted from signnames.csv file, as a pandas series.
+> Bar graph, of the data extracted from signnames.csv file, as a pandas series.
 ![alt text][image1]
 
 # CATEGORY : Design and Test a Model Architecture
@@ -110,6 +113,7 @@ The LeNet Architecture is so good that the initial try gave 89% accuracy. Howeve
 Hyper parameters :
 
 | Epochs     | 100  |
+|:------------:|:-------|
 | batch-size | 128  |
 | Learning rate | 0.001 |
 
@@ -168,4 +172,5 @@ The model was able to correctly guess 3 of the 5 traffic signs, which gives an a
 # Optional Category :  Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 * The First 2 layers' operations are taken out from Neural network, and are fed to the provided function, along with normalised sample image to visualize the Nural network operation. (Last block of IPython notebook.)
 
-
+![alt text][image10]
+![alt text][image9]
