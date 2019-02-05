@@ -97,7 +97,9 @@ After generation, the count of each class in the training set is equalised.
 | Max Pooling 2x2   | 2x2 stride, valid padding, outputs 5x5x16   |
 | Flatten       	| outputs 400                                 |
 | Fully Connected   | outputs 120                                 |
+| Drop out          | Keep probability = 0.7                      |
 | Fully Connected   | outputs 84                                  |
+| Drop out          | Keep probability = 0.7                      |
 | Fully Connected   | outputs 43                                  |
 
 To Train the model, the LeNet Architecture is used as the solid starting point. 
