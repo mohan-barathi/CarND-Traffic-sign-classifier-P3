@@ -23,7 +23,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./examples/visualization.png "Visualization"
 [image2]: ./examples/augment.png "Augmentation"
-[image3]: ./examples/after_generation.jpg "After generation"
+[image3]: ./examples/after_generation.png "After generation"
 [image4]: ./examples/accuracy.png "Accuracy"
 [image5]: ./examples/web_images.png "Web Images"
 [image6]: ./examples/TrafficSignal.png "Traffic Signal"
@@ -43,7 +43,7 @@ This project repository contains
 
 # CATEGORY : Data Set Summary & Exploration
 ## CRITERIA : Dataset Summary
-Bar graph from pandas library is used to calculate summary statistics of the traffic
+Bar graph is used to calculate summary statistics of the traffic signs
 > Code blocks 6, 7, and 8
 
 * The size of training set is 34799
@@ -53,7 +53,7 @@ Bar graph from pandas library is used to calculate summary statistics of the tra
 * The number of unique classes/labels in the data set is 43
 
 ## CRITERIA : Exploratory Visualization
-> Bar graph using Matplotlib, of the data extracted from signnames.csv file, as a pandas series.
+> Bar graph, of the data extracted from signnames.csv file, as a pandas series.
 ![alt text][image1]
 
 # CATEGORY : Design and Test a Model Architecture
