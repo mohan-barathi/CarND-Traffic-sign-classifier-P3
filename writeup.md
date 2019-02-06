@@ -138,35 +138,42 @@ Adam Optimizer is used in this training, as it is more efficient that Gradient D
 Various approaches were used to optimize the model, and the outcome of those experiments are discussed here.
 
 Initially, the training set was fed to the LeNet Model, just after **normalizing it around mean 0.**
-* training set accuracy of 93%
-* validation set accuracy of 89%
+* training set accuracy : 93%
+* validation set accuracy : 89%
 
 As a step towards data peprocessing, **Histogram normalization** was applied over all 3 R,G abd B channels, to normalize the brightness of all the images.
-* training set accuracy of 98%
-* validation set accuracy of 91%
+* training set accuracy : 98%
+* validation set accuracy : 91%
 
 The Model started to overfit the training data. One reason could be because of small size of the dataset, and the huge difference in counts of samples available under each classes. The model might bias towards the classes with more number of samples.
 So, **augmented images were added using affine transform**, which increased the size of training set 4 times.
 
 Again, the accuracy was 
-* training set accuracy of 98%
-* validation set accuracy of 90%
+* training set accuracy : 98%
+* validation set accuracy : 90%
 
 To overcome this problem, **2 dropout layers were added to the Lenet Architecture**, just after the 2 fully connected layers.
 These droupouts will help the model not to be too dependent on the training data set, and can generalize.
 
 Now the accuracy was 
-* training set accuracy of 98%
-* validation set accuracy of 93%
+* training set accuracy : 98%
+* validation set accuracy : 93%
+
+Changing the Learning rate, epoch, batch size, adding more droupout layers and changing the keep probability of droupouts actually decresed the overall accuracy.
+
+* training set accuracy : 85%
+* validation set accuracy : 70%
+
+So, these changes were reverted back.
 
 Normalising the data and producing huge set of augmented images, just added copies of same image (with slight changes), multiple times. Also, the newly added pixels as a part of augmentation, were not normalized.
 
 Hence, the Normalization step was moved after the Augmentation of training set.
 
 **Finally, the model results were:**
-* **training set accuracy of 99.5**
-* **validation set accuracy of 97.6**
-* **test set accuracy of 94.5**
+* **training set accuracy : 99.5**
+* **validation set accuracy : 97.6**
+* **test set accuracy : 94.5**
 
 ![alt text][image4]
  
@@ -212,22 +219,34 @@ The model was able to correctly guess 3 of the 5 traffic signs.
 
 > **Go straight or right** looks similar to **no entry**
 
-This can be solved by using a **huge dataset for training the model.**
+This can be solved by using a **generating a better and huge augmented dataset for training the model.**
 
 ## CRITERIA : Model Certainty - Softmax Probabilities
-> The first five top probabilities of classes are deduced in the code block 26, under the VISUALIZATIONS OF THE SOFTMAX PROBABILITIES category
+> The first five top probabilities of classes are deduced in the code block 26, under the VISUALIZATIONS OF THE SOFTMAX PROBABILITIES category.
+
+Here, the probabilities are presented in form of bar graphs.
+
+---
 
 ![alt text][image11]
 ![alt text][image12]
 
+---
+
 ![alt text][image13]
 ![alt text][image14]
+
+---
 
 ![alt text][image15]
 ![alt text][image16]
 
+---
+
 ![alt text][image17]
 ![alt text][image18]
+
+---
 
 ![alt text][image19]
 ![alt text][image20]
