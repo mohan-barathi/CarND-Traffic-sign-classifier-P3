@@ -31,6 +31,18 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 [image9]: ./examples/feature_map.png "feature_map"
 [image10]: ./examples/speed20.png "speed20"
+[image11]: ./examples/softmax_output1.png "soft_max_1"
+[image12]: ./examples/softmax_output2.png "soft_max_2"
+[image13]: ./examples/softmax_output3.png "soft_max_3"
+[image14]: ./examples/softmax_output4.png "soft_max_4"
+[image15]: ./examples/softmax_output5.png "soft_max_5"
+[image16]: ./examples/softmax_output6.png "soft_max_6"
+[image17]: ./examples/softmax_output7.png "soft_max_7"
+[image18]: ./examples/softmax_output8.png "soft_max_8"
+[image19]: ./examples/softmax_output9.png "soft_max_9"
+[image20]: ./examples/softmax_output10.png "soft_max_10"
+
+
 
 
 ## Rubric Points
@@ -141,6 +153,7 @@ Again, the accuracy was
 * validation set accuracy of 90%
 
 To overcome this problem, **2 dropout layers were added to the Lenet Architecture**, just after the 2 fully connected layers.
+These droupouts will help the model not to be too dependent on the training data set, and can generalize.
 
 Now the accuracy was 
 * training set accuracy of 98%
@@ -155,8 +168,6 @@ Hence, the Normalization step was moved after the Augmentation of training set.
 * **validation set accuracy of 97.6**
 * **test set accuracy of 94.5**
 
-Also, to overcome the problem of overfitting, 2 droupouts were added to the 2 last-before fully connected layers.
-These droupouts will help the model not to be too dependent on the training data set, and can generalize.
 ![alt text][image4]
  
 
@@ -176,10 +187,12 @@ The five German traffic signs that I found on the web:
 ## CRITERIA : Performance on New Images
 
 As expected, the performace is poor, and only few images were correctly identified.
+
 ![alt text][image6]
+
 ![alt text][image7]
 
-Here are the results of the prediction:
+**Here are the results of the prediction:**
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -190,12 +203,35 @@ Here are the results of the prediction:
 | Traffic signal			| General Caution      							|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%.
+The model was able to correctly guess 3 of the 5 traffic signs.
+> As we can see, the performance on these 5 images is **only 60%** , but the performance of our model in **training set is 99.5**, **validation set is 97.6**, and **testing set is 94.5**
+
+> This is mainly because, the signs with incorrect predictions look are more or less similar to the signs of predicted outcome.
+
+> **Genaral Caution** looks similar to **Traffic signal**
+
+> **Go straight or right** looks similar to **no entry**
+
+This can be solved by using a **huge dataset for training the model.**
 
 ## CRITERIA : Model Certainty - Softmax Probabilities
 > The first five top probabilities of classes are deduced in the code block 26, under the VISUALIZATIONS OF THE SOFTMAX PROBABILITIES category
-![alt text][image6]
-![alt text][image7]
+
+![alt text][image11]
+![alt text][image12]
+
+![alt text][image13]
+![alt text][image14]
+
+![alt text][image15]
+![alt text][image16]
+
+![alt text][image17]
+![alt text][image18]
+
+![alt text][image19]
+![alt text][image20]
+
 
 
 # Optional Category :  Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
