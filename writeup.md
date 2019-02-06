@@ -123,10 +123,37 @@ Adam Optimizer is used in this training, as it is more efficient that Gradient D
 
 ## CRITERIA : Solution Approach
 
-Finally, the model results were:
-* training set accuracy of 99.5
-* validation set accuracy of 97.6
-* test set accuracy of 94.5
+Various approaches were used to optimize the model, and the outcome of those experiments are discussed here.
+
+Initially, the training set was fed to the LeNet Model, just after **normalizing it around mean 0.**
+* training set accuracy of 93%
+* validation set accuracy of 89%
+
+As a step towards data peprocessing, **Histogram normalization** was applied over all 3 R,G abd B channels, to normalize the brightness of all the images.
+* training set accuracy of 98%
+* validation set accuracy of 91%
+
+The Model started to overfit the training data. One reason could be because of small size of the dataset, and the huge difference in counts of samples available under each classes. The model might bias towards the classes with more number of samples.
+So, **augmented images were added using affine transform**, which increased the size of training set 4 times.
+
+Again, the accuracy was 
+* training set accuracy of 98%
+* validation set accuracy of 90%
+
+To overcome this problem, **2 dropout layers were added to the Lenet Architecture**, just after the 2 fully connected layers.
+
+Now the accuracy was 
+* training set accuracy of 98%
+* validation set accuracy of 93%
+
+Normalising the data and producing huge set of augmented images, just added copies of same image (with slight changes), multiple times. Also, the newly added pixels as a part of augmentation, were not normalized.
+
+Hence, the Normalization step was moved after the Augmentation of training set.
+
+**Finally, the model results were:**
+* **training set accuracy of 99.5**
+* **validation set accuracy of 97.6**
+* **test set accuracy of 94.5**
 
 Also, to overcome the problem of overfitting, 2 droupouts were added to the 2 last-before fully connected layers.
 These droupouts will help the model not to be too dependent on the training data set, and can generalize.
